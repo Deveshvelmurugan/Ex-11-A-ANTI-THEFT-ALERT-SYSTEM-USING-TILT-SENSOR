@@ -50,10 +50,35 @@ The board is programmable using the Arduino IDE (Integrated Development Environm
 •	Stop Simulation: Click "Stop Simulation" to end the simulation.
 
 •	Save the Circuit: Click "Save" to keep your circuit design and code for future use.
+## CIRCUIT DIAGRAM 
+<img width="752" height="434" alt="image" src="https://github.com/user-attachments/assets/bf10bf59-b163-4dc0-af1f-44872ae37c16" />
 
 ## PROGRAM
-## OUTPUT
+```
+int ledPin=13;
+int inPin=7;
+void setup()
+{
+ Serial.begin(9600);
+  pinMode(ledPin,OUTPUT);
+  pinMode(inPin,INPUT);
+}
+void loop()
+{
+  int val=digitalRead(inPin);
+  if(val==0)
+  {
+    digitalWrite(ledPin,HIGH);
+  }
+  else
+  {
+    digitalWrite(ledPin,LOW);
+  }
+}
+```
 
+## OUTPUT
+<img width="753" height="431" alt="image" src="https://github.com/user-attachments/assets/f7cc11af-52df-42b1-9f66-595b61692ec3" />
 
 ## Result: 
 Thus measure the Tilt Sensor using SW200D with Arduino UNO Board/ESP-32 using Tinker CAD has been Verified Successfully.
